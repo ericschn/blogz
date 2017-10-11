@@ -2,14 +2,27 @@
 <html>
 <body>
 <head>
-    <title>Title yeah</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"/>
+    <title>Build-A-Blog</title>
 </head>
 <a href='/blog'>Main Blog Page</a>&nbsp; &nbsp;<a href='/add'>Add a Blog Entry</a>
 <!-- TODO: Header Links -->
 
+<div class='wrapper2'>
 {% block content %}
 
 {% endblock %}
+    <div>
+        {% with messages = get_flashed_messages() %}
+            <ul>
+                {% for message in messages %}
+                    <li class="error">{{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endwith %}
+    </div>
+
+</div>
 
 </body>
 </html>

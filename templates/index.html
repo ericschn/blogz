@@ -4,8 +4,12 @@
 
 <h1 style='text-align:center'>Build a Blog</h1>
 
-<!-- TODO: Iterate through created list of blog posts ordered by primary key id -->
-
-<!-- TODO: Display title of blog followed by content underneath -->
+{% for blog in blogs %}
+<div class='blog'>
+<a href='/blog?id={{blog.id}}'><h2>{{ blog.title }}</h2></a>
+<p>{{ blog.body }}</p>
+</div>
+<br/>
+{% endfor %}
 
 {% endblock %}

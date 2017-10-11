@@ -1,0 +1,36 @@
+body {
+    font-family: Helvetica;
+    background: lightgrey;
+}
+
+h1 {
+    text-shadow: 0px 2px grey;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+.wrapper {
+    background: white;
+    margin-top: 14px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.blog {
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+.error {
+    color: red;
+}
