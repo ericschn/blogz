@@ -2,14 +2,12 @@
 
 {% block content %}
 
-<h1 style='text-align:center'>Build a Blog</h1>
+<h1 style='text-align:center'>Blogz</h1>
 
-{% for blog in blogs %}
-<div class='blog'>
-<a href='/blog?id={{blog.id}}'><h2>{{ blog.title }}</h2></a>
-<p>{{ blog.body }}</p>
-</div>
-<br/>
+{% for user in userlist %}
+<ul>
+    <li><a href='/blog?user={{user.username}}'>{{ user.username }}</a></li>
+</ul>
 {% endfor %}
 
 {% endblock %}

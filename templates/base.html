@@ -1,12 +1,19 @@
 <!doctype html>
 <html>
-<body>
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}"/>
-    <title>Build-A-Blog</title>
+    <style>
+        .author{
+            font-style: italic;
+            font-size: 10pt;
+        }
+    </style>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css?q=1') }}"/>-->
+    <title>Blogz</title>
 </head>
-<a href='/blog'>Main Blog Page</a>&nbsp; &nbsp;<a href='/add'>Add a Blog Entry</a>
-<!-- TODO: Header Links -->
+<body>
+<a href='/'>home</a>&nbsp; &nbsp;<a href='/blog'>all posts</a>&nbsp; &nbsp;<a href='/add'>new post</a>
+&nbsp; &nbsp;<a href='/login' style='float:right'>login</a><p style='float:right'>&nbsp; &nbsp;</p><a href='/logout' style='float:right'>logout</a>
+
 
 <div class='wrapper2'>
 {% block content %}
